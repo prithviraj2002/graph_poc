@@ -17,13 +17,12 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(50.0),
+    return const Center(
       child: Stack(
         alignment: Alignment.bottomLeft,
         children: [
-          LineGraph(),
-          BarChartWidget()
+          BarChartWidget(),
+          //LineGraph(),
         ],
       ),
     );

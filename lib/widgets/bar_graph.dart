@@ -13,11 +13,16 @@ class BarChartWidget extends StatefulWidget {
 class _BarChartWidgetState extends State<BarChartWidget> {
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: double.infinity,
-      width: double.infinity,
+    return Container(
+      height: 500,
+      width: 500,
+      decoration: BoxDecoration(
+        border: Border.all()
+      ),
       child: BarChart(
         BarChartData(
+          maxY: 6,
+          minY: 0,
           barGroups: [
             BarChartGroupData(
                 x: 0,
@@ -51,24 +56,16 @@ class _BarChartWidgetState extends State<BarChartWidget> {
                   )
                 ]
             ),
-            BarChartGroupData(
-                x: 4,
-                barRods: [
-                  BarChartRodData(
-                      toY: 4
-                  )
-                ]
-            ),
           ],
           borderData: FlBorderData(
               border: const Border(bottom: BorderSide(), left: BorderSide())),
           gridData: FlGridData(show: false),
-          titlesData: FlTitlesData(
-            bottomTitles: AxisTitles(sideTitles: _bottomTitles),
-            leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-            rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          ),
+          // titlesData: FlTitlesData(
+          //   bottomTitles: AxisTitles(sideTitles: _bottomTitles),
+          //   leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          //   topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          //   rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          // ),
         ),
       ),
     );

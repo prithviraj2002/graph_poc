@@ -8,19 +8,24 @@ class LineGraph extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return SizedBox(
-      height: double.infinity,
-      width: double.infinity,
+    return Container(
+      height: 500,
+      width: 500,
+        decoration: BoxDecoration(
+            border: Border.all()
+        ),
       child: LineChart(
         LineChartData(
+          maxX: 6,
+          maxY: 6,
+          minX: 0,
+          minY: 0,
           lineBarsData: [
             LineChartBarData(
               spots: const [
-                FlSpot(0, 0),
                 FlSpot(1, 1),
                 FlSpot(2, 2),
                 FlSpot(3, 3),
-                FlSpot(4, 4),
               ],
               color: Colors.blue,
               isCurved: false,
@@ -29,12 +34,12 @@ class LineGraph extends StatelessWidget {
           borderData: FlBorderData(
               border: const Border(bottom: BorderSide(), left: BorderSide())),
           gridData: FlGridData(show: false),
-          titlesData: FlTitlesData(
-          bottomTitles: AxisTitles(sideTitles: _bottomTitles),
-          leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-          ),
+          // titlesData: FlTitlesData(
+          // bottomTitles: AxisTitles(sideTitles: _bottomTitles),
+          // leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          // topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          // rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          // ),
         ),
       )
     );
