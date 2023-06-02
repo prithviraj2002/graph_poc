@@ -2,6 +2,8 @@ import 'package:draw_graph/draw_graph.dart';
 import 'package:draw_graph/models/feature.dart';
 import 'package:flutter/material.dart';
 
+//To draw a line graph using draw_chart library in flutter
+
 class GraphScreen extends StatefulWidget {
   const GraphScreen({Key? key}) : super(key: key);
 
